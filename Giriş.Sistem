@@ -1,0 +1,32 @@
+#Kullanıcı adı ile şifre giriş yapma
+
+kullaniciAdi = []
+SifreAdi = []
+yalnisGiris = 0
+yalnisGiris2 = 0
+kullaniciAdiEkleme = input("Kullanıcı Adı Oluşturun : ")
+Sifre = int(input("Şifre oluşturun (Sadece sayılar ile oluşturun) : "))
+
+kullaniciAdi.append(kullaniciAdiEkleme)
+SifreAdi.append(Sifre)
+
+while True:
+    if input("Kullanıcı adınızı girin :") == kullaniciAdi[0]:
+     print("Kullanıcı adınız doğru")
+     break
+    else:
+        yalnisGiris += 1
+        print("Yalnış giriş")
+        if yalnisGiris == 3:
+            print("3 hatalı giriş algılandı!")
+            break
+while True :
+    if input("Şifrenizi girin : ") == SifreAdi[0]:
+        print("Şifreniz doğru")
+        break
+    else :
+        yalnisGiris2 += 1
+        print("Yalnış giriş")
+        if yalnisGiris2 == 3:
+            print("3 hatali giriş algılandı")
+            break
